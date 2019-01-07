@@ -29,5 +29,9 @@ namespace ProPedia.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<ProPedia.Models.Article> Articles { get; set; }
+
+        public System.Data.Entity.DbSet<ProPedia.Models.Category> Categories { get; set; }
     }
 }
