@@ -5,6 +5,8 @@ namespace ProPedia.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
+        internal string UserName;
+
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }

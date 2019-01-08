@@ -47,6 +47,7 @@ namespace ProPedia.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Category,Title,Content")] Article article)
         {
@@ -93,6 +94,7 @@ namespace ProPedia.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,IdUser,IdCateg,Title,Content,Date")] Article article)
         {
@@ -122,6 +124,7 @@ namespace ProPedia.Controllers
 
         // POST: Articles/Delete/5
         [HttpPost, ActionName("Delete")]
+        [ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {

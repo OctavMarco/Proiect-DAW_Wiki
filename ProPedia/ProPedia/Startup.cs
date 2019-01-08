@@ -30,7 +30,7 @@ namespace ProPedia
                 roleManager.Create(role);
                 // se adauga utilizatorul administrator
                 var user = new ApplicationUser();
-                user.UserName = "admin@admin.com";
+                user.UserName = "Admin";
                 user.Email = "admin@admin.com";
                 var adminCreated = UserManager.Create(user, "Administrator1!");
                 if (adminCreated.Succeeded)
